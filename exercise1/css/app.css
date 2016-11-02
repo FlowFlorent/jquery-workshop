@@ -1,0 +1,31 @@
+/* Write your code here */
+.announcement {
+    border: 0.5em solid #C6FF61;
+    margin: 1em;
+    padding: 0.5em;
+    background-color: #61FFE9;
+    position: relative;
+    border-radius: 5px;
+}
+
+.announcement.shows p{
+    display: block;
+}
+
+.announcement p {
+    display: none;
+}
+
+.announcement-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FFE961;
+    border: 5px solid #61FFE9;
+    border-radius: 10%;
+    opacity: 0.5;
+}
+
+.announcement-button:hover {
+    opacity: 1.0;
+}
