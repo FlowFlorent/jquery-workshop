@@ -1,0 +1,79 @@
+/* Box-sizing fix! */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+ul.block-grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+.clickable-image {
+  cursor: pointer;
+}
+
+ul.block-grid li {
+  padding: 5px; /* Adding a 10px padding on a 100% width would not work if it wasn't for box-sizing: border-box! */
+}
+
+ul.block-grid-2 > li {
+  width: 50%;
+}
+
+@media only screen and (min-width:641px){
+  ul.block-grid-3 > li {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (min-width: 1025px){
+  ul.block-grid-4 > li {
+      width: 25%;
+  }  
+}
+
+.kittens-gallery {
+  justify-content: center; /* if there are less elements on the last row, center them instead of sending them to the left */
+  text-align: center; /* This will center the caption text below each image */
+}
+
+.kittens-gallery img {
+  padding: 5px;
+  border: 1px solid #999;
+  margin-bottom: 5px;
+}
+
+.kittens-gallery p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overlay.hide {
+  display: none;
+}
+
+.image-caption {
+  color: white;
+}
